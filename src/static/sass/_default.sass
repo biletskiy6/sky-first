@@ -1,0 +1,198 @@
+@import "vars"
+@import "libs"
+@import "smart-grid"
+@import "_mixins/mixins"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+html
+	box-sizing: border-box
+	*, *:before, *:after
+		box-sizing: inherit
+img
+	display: block
+	max-width: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	color: $default-color
+	line-height: 1.65
+	font-family: $default-font
+	font-weight: 400
+	overflow-x: hidden
+
+.copyright-text
+	font-size: 14 px
+	color: rgba(255, 255, 255, .5)
+.nav-fullscreen
+	display: flex
+	justify-content: center
+	align-items: center
+	position: fixed
+	width: 100%
+	height: 100%
+	top: 0%
+	left: -110%
+	z-index: 10
+	background: $default-color
+	overflow: hidden
+	.copyright-text
+		position: absolute
+		bottom: 32px
+		left: 40px
+	&__menu
+		display: flex
+		max-width: 920px
+		flex: 1
+		width: 100%
+		margin: 0 auto
+	&__footer
+		align-self: flex-end
+.nav-socials
+	align-self: flex-end
+	color: #fff
+	display: flex
+	flex-direction: column
+	align-items: flex-end
+	width: 100%
+	&-top
+		margin-bottom: 40px
+		ul
+			display: flex
+			margin: 0
+			padding: 0
+			list-style-type: none
+			li
+				color: #FFFFFF80
+				margin-right: 30px
+				&:last-child
+					margin-right: 0
+			a
+				text-decoration: none
+				color: #fff
+
+.nav-menu
+	display: flex
+	flex: none
+	flex-direction: column
+	justify-content: flex-start
+	margin: 0
+	padding: 0
+	li
+		margin-bottom: 30px
+		&:last-child
+			margin-bottom: 0
+	a
+		text-decoration: none
+		font-family: $section-header-font
+		font-size: 32px
+		font-weight: 700
+		color: #fff
+		display: block
+		text-transform: uppercase
+.to-right
+	display: flex
+	flex-direction: column
+	align-items: flex-end
+.details-nav
+	display: flex
+	justify-content: space-between
+	position: absolute
+	max-width: 1110px
+	z-index: 2
+	width: 100%
+	left: 50%
+	transform: translateX(-50%)
+	margin: 0 auto
+	padding: 27px 65px
+	bottom: 0
+	width: 100%
+	height: 72px
+	background: #fff
+	&__back
+		display: flex
+		align-items: center
+		text-decoration: none
+		color: inherit
+		font-size: 14px
+		cursor: pointer
+		i
+			transform: rotate(-90deg)
+			margin-right: 5px
+.breadcrumbs
+	list-style-type: none
+	margin: 0
+	padding: 0
+	display: flex
+	.delimeter
+		display: inline-block
+		margin: 0 2px
+	a
+		text-decoration: none
+		color: #03030380
+	li
+		&.active
+			a
+				color: $default-color
+				text-transform: uppercase
+.debug
+	+debug(rgba(255, 124, 247, .2), blue)
+.learn-more
+	text-decoration: none
+	display: inline-flex
+	align-items: center
+	height: 56px
+	color: #fff
+	font-size: 16px
+	font-weight: 700
+	border: 1px solid #FFFFFF29
+	background-color: #FFFFFF1F
+	border-left-color: #E9D076
+	border-left-width: 4px
+	&__text
+		display: inline-block
+		text-align: center
+		width: 150px
+	&__block
+		display: flex
+		align-items: center
+		justify-content: center
+		align-items: center
+		width: 56px
+		height: 100%
+		background: #fff
+		i
+			color: #000
+
+.container
+	+wrapper()
+.to-top
+	position: fixed
+	opacity: 0
+	visibility: hidden
+	display: flex
+	z-index: 10
+	right: 40px
+	bottom: 40px
+	align-items: center
+	cursor: pointer
+	justify-content: center
+	width: 56px
+	height: 56px
+	border-radius: 50%
+	background: #fff
+	box-shadow: 0px 0px 24px #09152D29
+	transition: all .35s ease
+	&.active
+		opacity: 1
+		visibility: visible
+		transition: all .35s ease

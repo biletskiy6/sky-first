@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Ясла - Саміт Любителів Авіації</title>
+  <meta name="description" content="Ясла - Саміт Любителів Авіації" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta property="og:image" content="path/to/image.jpg" />
+  <meta name="theme-color" content="#283645" />
+  <meta name="msapplication-navbutton-color" content="#283645" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="#283645" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700;900&family=Roboto&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" href="static/img/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="static/img/favicon/apple-touch-icon-180x180.png" />
+  <base href="/" />
+  <link rel="stylesheet" href="static/css/main.css" />
+</head>
+
+<body class="home">
+  <script id="__bs_script__">
+    //<![CDATA[
+    document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.26.12'><\/script>".replace("HOST",
+      location.hostname));
+    //]]>
+
+  </script>
+
+  <!-- <div class="preloader">
+    <svg class="svg-calLoader" xmlns="http://www.w3.org/2000/svg" width="230" height="230">
+      <path class="cal-loader__path"
+        d="M86.429 40c63.616-20.04 101.511 25.08 107.265 61.93 6.487 41.54-18.593 76.99-50.6 87.643-59.46 19.791-101.262-23.577-107.142-62.616C29.398 83.441 59.945 48.343 86.43 40z"
+        fill="none" stroke="#0099cc" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
+        stroke-dasharray="10 10 10 10 10 10 10 432" stroke-dashoffset="77" />
+      <path class="cal-loader__plane"
+        d="M141.493 37.93c-1.087-.927-2.942-2.002-4.32-2.501-2.259-.824-3.252-.955-9.293-1.172-4.017-.146-5.197-.23-5.47-.37-.766-.407-1.526-1.448-7.114-9.773-4.8-7.145-5.344-7.914-6.327-8.976-1.214-1.306-1.396-1.378-3.79-1.473-1.036-.04-2-.043-2.153-.002-.353.1-.87.586-1 .952-.139.399-.076.71.431 2.22.241.72 1.029 3.386 1.742 5.918 1.644 5.844 2.378 8.343 2.863 9.705.206.601.33 1.1.275 1.125-.24.097-10.56 1.066-11.014 1.032a3.532 3.532 0 0 1-1.002-.276l-.487-.246-2.044-2.613c-2.234-2.87-2.228-2.864-3.35-3.309-.717-.287-2.82-.386-3.276-.163-.457.237-.727.644-.737 1.152-.018.39.167.805 1.916 4.373 1.06 2.166 1.964 4.083 1.998 4.27.04.179.004.521-.076.75-.093.228-1.109 2.064-2.269 4.088-1.921 3.34-2.11 3.711-2.123 4.107-.008.25.061.557.168.725.328.512.72.644 1.966.676 1.32.029 2.352-.236 3.05-.762.222-.171 1.275-1.313 2.412-2.611 1.918-2.185 2.048-2.32 2.45-2.505.241-.111.601-.232.82-.271.267-.058 2.213.201 5.912.8 3.036.48 5.525.894 5.518.914 0 .026-.121.306-.27.638-.54 1.198-1.515 3.842-3.35 9.021-1.029 2.913-2.107 5.897-2.4 6.62-.703 1.748-.725 1.833-.594 2.286.137.46.45.833.872 1.012.41.177 3.823.24 4.37.085.852-.25 1.44-.688 2.312-1.724 1.166-1.39 3.169-3.948 6.771-8.661 5.8-7.583 6.561-8.49 7.387-8.702.233-.065 2.828-.056 5.784.011 5.827.138 6.64.09 8.62-.5 2.24-.67 4.035-1.65 5.517-3.016 1.136-1.054 1.135-1.014.207-1.962-.357-.38-.767-.777-.902-.893z"
+        fill="#000033" />
+    </svg>
+  </div> -->
+
+  <!-- Adaptive header without media query -->
+  <header class="header">
+    <div class="top-line">
+      <div class="row">
+        <div class="logo">
+          <a href="/">
+            <img class="logo__image" alt='Yasla' src="/static/img/logo.png" srcset="/static/img/logo@2x.png 2x" /></a>
+        </div>
+        <div class="menu">
+          <!-- <a href="#" class="feedback">Оставить заявку</a> -->
+          <div class="menuRow">
+            <a href="#goal" class="menuItem">Мета проекта</a>
+            <a href="#program" class="menuItem">Програма фестивалю</a>
+            <a href="#info" class="menuItem">Історічна довідка</a>
+            <a href="#about" class="menuItem">Про проект</a>
+            <a href="#contacts" class="menuItem">Контакти</a>
+            <!-- <a href="#" class="menuItem">+38(068)642-50-65 </a> -->
+          </div>
+        </div>
+        <div class="contacts">
+          <a class="feedback" target="_blank"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdujpzPupy2Cl4NfPmTtKU5h590oT4g33TPZZ_cFhtCJcTcEg/viewform">Подати
+            заявку</a>
+          <a class="phone" href="tel:+380686425065">+38(068)642-50-65</a>
+        </div>
+        <div class="menu-toggle">
+          <div class="menu-toggle__row"></div>
+          <div class="menu-toggle__row"></div>
+          <div class="menu-toggle__row"></div>
+        </div>
+      </div>
+    </div>
+    <div class="header-banner">
+      <img src="static/img/header/plane.svg" alt="" />
+    </div>
+    <div class="header-intro">
+      <div class="header-intro__content">
+        <h1>Я <span><svg xmlns="http://www.w3.org/2000/svg" height="72" viewBox="0 0 24 24" width="72">
+              <path d="M0 0h24v24H0V0z" fill="none" />
+              <path
+                d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z" />
+            </svg></span> cла 2020</h1>
+        <p>
+          Саміт Любителів Авіації <br />
+          фестиваль - виставка саморобних ЛА
+        </p>
+        <a class="btn" target="_blank"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdujpzPupy2Cl4NfPmTtKU5h590oT4g33TPZZ_cFhtCJcTcEg/viewform">Реєстрація</a>
+      </div>
+    </div>
+  </header>
+  <!-- Adaptive header without media query -->
+
+  <section id="goal" class="goal">
+    <div class="goal-container">
+      <div class="goal-content">
+        <h2>Мета проекта:</h2>
+        <p>
+          Наша команда ставить за мету відродження та розвиток славетних
+          традицій, єднання, та гартування людей, що прагнуть підкорити небо
+          на власноруч створених літальних апаратів, та популяризація легкої
+          авіації та авіаційних видів спорту серед дітей, молоді та
+          прогресивної громадськості.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="program" class="program section">
+    <div class="container">
+      <h3 class="section-header">Програма фестивалю</h3>
+      <div class="tabs">
+        <ul class="tabs__caption">
+          <li class="active">П’ятниця</li>
+          <li>Субота</li>
+          <li>Неділя</li>
+        </ul>
+
+        <div class="tabs__content  active">
+          <div class="tabs-item">
+            <div class="tab-date">
+              <div class="tab-date-info">
+                <div class="tab-date-top"><span>07</span>Серпень</div>
+                <div class="tab-date-time">до 17:00</div>
+              </div>
+              <div class="badge past">минуло</div>
+            </div>
+            <div class="tab-content">
+              <p>
+                Приїзд учасників, розміщення в наметовому містечку та
+                облаштування виставки саморобних і модернізованих ЛА.
+              </p>
+            </div>
+          </div>
+          <div class="tabs-item">
+            <div class="tab-date">
+              <div class="tab-date-info">
+                <div class="tab-date-top"><span>07</span>Серпень</div>
+                <div class="tab-date-time">18:00</div>
+              </div>
+              <div class="badge keeping">триває</div>
+            </div>
+            <div class="tab-content">
+              <p>
+                коло знайомств авіаторів-аматорів.
+              </p>
+            </div>
+          </div>
+          <div class="tabs-item">
+            <div class="tab-date">
+              <div class="tab-date-info">
+                <div class="tab-date-top"><span>07</span>Серпень</div>
+                <div class="tab-date-time">19:00</div>
+              </div>
+              <div class="badge wait">очікуйте</div>
+            </div>
+            <div class="tab-content">
+              <p>
+                закритий круглий стіл "Сучасний стан та перспективи розвитку аматорської авіаспільноти".
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tabs__content">
+          <div class="tabs-item">
+            <div class="tab-date">
+              <div class="tab-date-info">
+                <div class="tab-date-top"><span>08</span>Серпень</div>
+                <div class="tab-date-time">09:00</div>
+              </div>
+              <div class="badge past">минуло</div>
+            </div>
+            <div class="tab-content">
+              <p>
+                Брифінг
+              </p>
+            </div>
+          </div>
+          <div class="tabs-item">
+            <div class="tab-date">
+              <div class="tab-date-info">
+                <div class="tab-date-top"><span>08</span>Серпень</div>
+                <div class="tab-date-time">10:00</div>
+              </div>
+              <div class="badge keeping">триває</div>
+            </div>
+            <div class="tab-content">
+              <p>
+                Відкриття Виставки СЛА
+              </p>
+            </div>
+          </div>
+          <div class="tabs-item">
+            <div class="tab-date">
+              <div class="tab-date-info">
+                <div class="tab-date-top"><span>08</span>Серпень</div>
+                <div class="tab-date-time">11:00</div>
+              </div>
+              <div class="badge wait">очікуйте</div>
+            </div>
+            <div class="tab-content">
+              <p>
+                Конкурс «Краща аматорська конструкція». Партнер призового фонду CREWSHOP
+              </p>
+            </div>
+          </div>
+
+
+          <div class="tabs-item">
+            <div class="tab-date">
+              <div class="tab-date-info">
+                <div class="tab-date-top"><span>08</span>Серпень</div>
+                <div class="tab-date-time">15:30</div>
+              </div>
+              <div class="badge wait">очікуйте</div>
+            </div>
+            <div class="tab-content">
+              <p>
+                Музичне привітання авіаторам від Петровочки
+              </p>
+            </div>
+          </div>
+
+          <div class="tabs-item">
+            <div class="tab-date">
+              <div class="tab-date-info">
+                <div class="tab-date-top"><span>08</span>Серпень</div>
+                <div class="tab-date-time">16:00</div>
+              </div>
+              <div class="badge wait">очікуйте</div>
+            </div>
+            <div class="tab-content">
+              <p>
+                Відкриття Саміту Любителів Авіації
+              </p>
+            </div>
+          </div>
+
+          <div class="tabs-item">
+            <div class="tab-date">
+              <div class="tab-date-info">
+                <div class="tab-date-top"><span>08</span>Серпень</div>
+                <div class="tab-date-time">16:30</div>
+              </div>
+              <div class="badge wait">очікуйте</div>
+            </div>
+            <div class="tab-content">
+              <p>
+                Презентація літальних апаратів учасників
+              </p>
+            </div>
+          </div>
+
+          <div class="tabs-item">
+            <div class="tab-date">
+              <div class="tab-date-info">
+                <div class="tab-date-top"><span>08</span>Серпень</div>
+                <div class="tab-date-time">17:00</div>
+              </div>
+              <div class="badge wait">очікуйте</div>
+            </div>
+            <div class="tab-content">
+              <p>
+                Ас-Майстеркласи
+              </p>
+            </div>
+          </div>
+
+
+          <div class="tabs-item">
+            <div class="tab-date">
+              <div class="tab-date-info">
+                <div class="tab-date-top"><span>08</span>Серпень</div>
+                <div class="tab-date-time">18:00</div>
+              </div>
+              <div class="badge wait">очікуйте</div>
+            </div>
+            <div class="tab-content">
+              <p>
+                Турнір з армреслінгу на приз від Ігора Мазуренка - пілота, Чемпіона Світу з рукоборства у серії Masters,
+                Президента Professional Armwrestling League USA (Las Vegas), Вiце-президента Європейської Федерації
+                Армрестлінгу, засновника та менеджера Кубку Світу з армрестлінгу «Золотий тур»
+              </p>
+            </div>
+          </div>
+
+
+          <div class="tabs-item">
+            <div class="tab-date">
+              <div class="tab-date-info">
+                <div class="tab-date-top"><span>08</span>Серпень</div>
+                <div class="tab-date-time">19:00</div>
+              </div>
+              <div class="badge wait">очікуйте</div>
+            </div>
+            <div class="tab-content">
+              <p>
+                Показ колекції чоловічих сорочок від дизайнера Олесі Теліженко
+              </p>
+            </div>
+          </div>
+
+          <div class="tabs-item">
+            <div class="tab-date">
+              <div class="tab-date-info">
+                <div class="tab-date-top"><span>08</span>Серпень</div>
+                <div class="tab-date-time">19:30</div>
+              </div>
+              <div class="badge wait">очікуйте</div>
+            </div>
+            <div class="tab-content">
+              <p>
+                Презентація секції безпілотних ЛА
+              </p>
+            </div>
+          </div>
+
+          <div class="tabs-item">
+            <div class="tab-date">
+              <div class="tab-date-info">
+                <div class="tab-date-top"><span>08</span>Серпень</div>
+                <div class="tab-date-time">20:00</div>
+              </div>
+              <div class="badge wait">очікуйте</div>
+            </div>
+            <div class="tab-content">
+              <p>
+                Презентація секції повітряних куль
+              </p>
+            </div>
+          </div>
+          <div class="tabs-item">
+            <div class="tab-date">
+              <div class="tab-date-info">
+                <div class="tab-date-top"><span>08</span>Серпень</div>
+                <div class="tab-date-time">20:30</div>
+              </div>
+              <div class="badge wait">очікуйте</div>
+            </div>
+            <div class="tab-content">
+              <p>
+                Авіавікторина
+              </p>
+            </div>
+          </div>
+
+          <div class="tabs-item">
+            <div class="tab-date">
+              <div class="tab-date-info">
+                <div class="tab-date-top"><span>08</span>Серпень</div>
+                <div class="tab-date-time">20:45</div>
+              </div>
+              <div class="badge wait">очікуйте</div>
+            </div>
+            <div class="tab-content">
+              <p>
+                Підсумки конкурсу «Краща аматорська конструкція»
+              </p>
+            </div>
+          </div>
+
+
+
+          <div class="tabs-item">
+            <div class="tab-date">
+              <div class="tab-date-info">
+                <div class="tab-date-top"><span>08</span>Серпень</div>
+                <div class="tab-date-time">21:00</div>
+              </div>
+              <div class="badge wait">очікуйте</div>
+            </div>
+            <div class="tab-content">
+              <p>
+                Авіа-тематичний концерт від гурту SPIV BRATIV
+              </p>
+            </div>
+          </div>
+
+          <div class="tabs-item">
+            <div class="tab-date">
+              <div class="tab-date-info">
+                <div class="tab-date-top"><span>08</span>Серпень</div>
+                <div class="tab-date-time">21:30</div>
+              </div>
+              <div class="badge wait">очікуйте</div>
+            </div>
+            <div class="tab-content">
+              <p>
+                Дискотека від DJ Mordax Bastards
+              </p>
+            </div>
+          </div>
+
+
+          <div class="tabs-item">
+            <div class="tab-date">
+              <div class="tab-date-info">
+                <div class="tab-date-top"><span>08</span>Серпень</div>
+                <div class="tab-date-time">22:00</div>
+              </div>
+              <div class="badge wait">очікуйте</div>
+            </div>
+            <div class="tab-content">
+              <p>
+                Вечірні авіапосиденьки
+              </p>
+            </div>
+          </div>
+
+          <div class="tabs-item">
+            <div class="tab-date">
+              <div class="tab-date-info">
+                <div class="tab-date-top"><span>08</span>Серпень</div>
+                <div class="tab-date-time">23:00</div>
+              </div>
+              <div class="badge wait">очікуйте</div>
+            </div>
+            <div class="tab-content">
+              <p>
+                Нічний кінозал «Під крилом»
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="tabs__content">
+          <div class="tabs-item">
+            <div class="tab-date">
+              <div class="tab-date-info">
+                <div class="tab-date-top"><span>09</span>Серпень</div>
+                <div class="tab-date-time">10:00</div>
+              </div>
+              <div class="badge past">минуло</div>
+            </div>
+            <div class="tab-content">
+              <p>
+                Брифінг
+              </p>
+            </div>
+          </div>
+          <div class="tabs-item">
+            <div class="tab-date">
+              <div class="tab-date-info">
+                <div class="tab-date-top"><span>09</span>Серпень</div>
+                <div class="tab-date-time">11:00</div>
+              </div>
+              <div class="badge keeping">триває</div>
+            </div>
+            <div class="tab-content">
+              <p>
+                «Авіабарахолка»
+              </p>
+            </div>
+          </div>
+          <div class="tabs-item">
+            <div class="tab-date">
+              <div class="tab-date-info">
+                <div class="tab-date-top"><span>09</span>Серпень</div>
+                <div class="tab-date-time">12:00</div>
+              </div>
+              <div class="badge wait">очікуйте</div>
+            </div>
+            <div class="tab-content">
+              <p>
+                Заняття по вимірюванню тяги та регулюванню гвинта
+              </p>
+            </div>
+          </div>
+          <div class="tabs-item">
+            <div class="tab-date">
+              <div class="tab-date-info">
+                <div class="tab-date-top"><span>09</span>Серпень</div>
+                <div class="tab-date-time">13:00</div>
+              </div>
+              <div class="badge wait">очікуйте</div>
+            </div>
+            <div class="tab-content">
+              <p>
+                Заняття по вимірюванню та регулюванню центровки ЛА
+              </p>
+            </div>
+          </div>
+          <div class="tabs-item">
+            <div class="tab-date">
+              <div class="tab-date-info">
+                <div class="tab-date-top"><span>09</span>Серпень</div>
+                <div class="tab-date-time">14:00</div>
+              </div>
+              <div class="badge wait">очікуйте</div>
+            </div>
+            <div class="tab-content">
+              <p>
+                Закриття виставки
+              </p>
+            </div>
+          </div>
+
+          <div class="tabs-item">
+            <div class="tab-date">
+              <div class="tab-date-info">
+                <div class="tab-date-top"><span>09</span>Серпень</div>
+                <div class="tab-date-time">15:00</div>
+              </div>
+              <div class="badge wait">очікуйте</div>
+            </div>
+            <div class="tab-content">
+              <p>
+                Роз’їзд учасників і гостей
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="info" class="info section">
+    <div class="info-description container">
+      <div class="info-description-container">
+        <div class="info-details">
+          <h3 class="section-header">Історична довідка</h3>
+          <p>
+            За часи незалежності Україні не було проведено жодного заходу
+            присвяченого саморобним літальним апаратів. Останній такий
+            фестиваль відбувся ще за засів СРСР, у далекому 1991 році на
+            аеродромі Количівка в Чернігівській області. На сьогодні жодна
+            державна чи громадська інституція не підтримує розвиток
+            аматорської авіації в Україні.
+          </p>
+        </div>
+      </div>
+      <div class="info-image">
+        <div class="info-bg"></div>
+        <div class="info-bg__image">
+          <img src="/static/img/about/about.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="separate-bg"></div> -->
+  </section>
+
+  <section id="about" class="about section">
+    <div class="container">
+      <div class="about__wrapper">
+        <div class="about__content">
+          <img src="static/img/about/road.svg" alt="">
+          <h4 class="section-header">Про проект</h4>
+          <p>
+            Саміт любителів авіації - новітня авіаційна подія на теренах
+            сучасного культурного простору, який вже охрестили «Український
+            Ошкош»
+          </p>
+          <p>
+            Їi унікальність полягає в тому, що вперше за останні 27 років
+            вдалося зібрати в одному місці людей, душа і серце яких по-
+            особливому любить небо, а саме, ентузіастів, винахідників,
+            конструкторів аматорів, які самостійно створюють, будують,
+            вдосконалюють, модернізують і відтворюють сучасні та iсторичні
+            літальні апарати. I перспективи можуть бути вражаючими. Адже,
+            найвідоміший, наймасштабніший та найпрестижніший у світі фестиваль
+            експериментальної авіації AirVenture Oshkosh, який щорічно
+            проходить в американському містечку Ошкош, був заснований Полом
+            Побережним, сином українського емігранта, та починався з
+            невеличкої групи ентузіастів-аматорів.
+          </p>
+          <p>
+            У минулому році на фестиваль-виставку було представлено більше 40
+            типів літальних апаратів, серед яких 23 аматорської конструкції.
+            Ми також подали декілька проектних ідей, пов'язаних з розвитком
+            малої авіації до нової стратегії розвитку Черкаської області. В
+            цьому році до нас в якості партнерів та співорганізаторів
+            долучився Сателітний Ротарі Клуб «Черкаси Скай». Окремо хочеться
+            сказати про місце проведення фестивалю. Це аеродром з довжиною
+            злітної смуги 1500м та шириною 80м, який раніше використовувався,
+            як військовий, а потім якнавчальний. Його розміри та розташування
+            якнайкраще підходять для проведення заходів легкої та аматорської
+            авіації.
+          </p>
+        </div>
+        <div class="about__map">
+
+          <div class="about__description">
+            <h4>Місце проведення заходу</h4>
+            <p>Колишній аеродром біля с. Ротмістрівка, Смілянського району, Черкаської області.</p>
+          </div>
+          <img src="static/img/map.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="partners section">
+    <div class="container">
+      <h4 class="section-header">Фестиваль відбувся завдяки</h4>
+      <div class="partners__wrapper">
+        <div class="partners-items">
+          <div class="partners-item">
+            <h4>Організатору:</h4>
+            <ul>
+              <li>
+                <img src="static/img/round.svg" alt="" /><span>Авіаклуб «Параарт»</span>
+              </li>
+            </ul>
+          </div>
+          <div class="partners-item">
+            <h4>Співорганізатори:</h4>
+            <ul>
+              <li>
+
+                <img src="static/img/round.svg" alt="" /><span>ГО “Ротарі клуб Черкаси”</span>
+              </li>
+              <li>
+
+                <img src="static/img/round.svg" alt="" /><span>Сателітний Ротарі Клуб <br /> «Черкаси Скай»</span>
+              </li>
+            </ul>
+          </div>
+          <div class="partners-item">
+            <h4>За підтримки:</h4>
+            <ul>
+              <li>
+
+                <img src="static/img/round.svg" alt="" /><span>Черкаської ОДА</span>
+              </li>
+              <li>
+
+                <img src="static/img/round.svg" alt="" /><span>Смілянської РДА</span>
+              </li>
+              <li>
+
+                <img src="static/img/round.svg" alt="" /><span>Ротмістрівської ОТГ</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section media">
+    <div class="container">
+      <h4 class="section-header">Про нас в медіа</h4>
+      <div class="media__content">
+        <div class="media__image">
+          <img alt='media' src="/static/img/media/media.png" srcset="/static/img/media/media@2x.png 2x" />
+          <a class="play" href="https://www.youtube.com/watch?v=LLxN35E2X3s" target="_blank"> <img
+              src="/static/img/play.svg" alt="Play"></a>
+        </div>
+        <div class="media__text">
+          <p>Несколько десятков самолетов со всей Украины: в Черкасской области прошел авиафестиваль</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="contacts" class="s-contacts section">
+    <div class="container">
+      <div class="s-contacts__wrapper">
+        <div class="c-items">
+          <div class="c-item cnt">
+            <h4>Контакти:</h4>
+
+            <ul>
+              <li>
+
+                <a href="tel:+380503512597">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                  </svg>
+                  <span> +38 (050) 351-25-97</span></a>
+              </li>
+              <li>
+
+                <a target="_blank" href="mailto:ovi_iris@ukr.net">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                    <path d="M0 0h24v24H0V0z" fill="none" />
+                    <path
+                      d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 4.99L4 6h16zm0 12H4V8l8 5 8-5v10z" />
+                  </svg>
+                  <span>ovi_iris@ukr.net</span></a>
+              </li>
+            </ul>
+          </div>
+          <div class="c-item plane">
+
+            <img alt='media' src="/static/img/contacts/255.png" srcset="/static/img/contacts/255@2x.png 2x" />
+          </div>
+          <div class="c-item">
+            <h4>Слідкуйте за нами у Facebook:</h4>
+            <div class="fb-page" data-href="https://www.facebook.com/yaslafest" data-width="400px"
+              data-hide-cover="false" data-show-facepile="false"></div>
+            <a href="#">
+              <img src="" alt="">
+            </a>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <footer class="footer">
+
+    <div class="bg"></div>
+    <div class="container">
+      <div class="footer__content">
+        <div class="rights">
+          <p>© 2020 Саміт Любителів Авіації</p>
+        </div>
+        <div class="footer__tangram">
+          <a target="_blank" href="https://tangram.ua/"> <img src="/static/img/tangram.svg" alt="Tangram"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v8.0"
+    nonce="zKQxwXQU"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="static/js/libs.min.js"></script>
+  <script src="static/js/scripts.min.js"></script>
+</body>
+
+</html>
